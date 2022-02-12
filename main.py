@@ -20,9 +20,8 @@ def save_data_to_csv(data):
 class SimpleWine:
     url = 'https://simplewine.ru/api/'
 
-    def __init__(self, version, shop_id, available, address, category, save_data_to_file=False):
+    def __init__(self, version, available, address, category, save_data_to_file=False):
         self.version = version
-        self.shop_id = shop_id
         self.available = available
         self.address = address
         self.category = category
@@ -267,7 +266,6 @@ class SimpleWine:
 
 if __name__ == '__main__':
     parser = SimpleWine(version='v2',  # (в некоторых запросах используется v3)
-                        shop_id=None,
                         available=True,  # Сбор товарор только в наличии
                         address='Обнинск, пр-кт. Ленина, дом 137, корп. 4, пом.7.',  # адресс магазина "Город, адрес"
                         category='Крепкие напитки',
